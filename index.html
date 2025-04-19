@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tresor - Cafe</title>
+
+    <link
+      rel="icon"
+      href="https://treasor-menu.netlify.app/imgs/logo.png"
+      type="image/x-icon"
+    />
+
+    <!-- Meta Tags for SEO -->
+    <meta
+      name="description"
+      content="نحن فخورون بأن نطلق على أنفسنا اسم مجتمع الإنتاجية"
+    />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Tresor - Cafe" />
+    <meta
+      property="og:image"
+      content="https://tresor1.netlify.app/images/Opening/13.jpg"
+    />
+    <!-- content="https://ali-el-shoraa.netlify.app/imgs/ali-eui1.jpg" -->
+    <!-- content="https://treasor-menu.netlify.app/imgs/logo.png" -->
+    <meta
+      property="og:description"
+      content="نحن فخورون بأن نطلق على أنفسنا اسم مجتمع الإنتاجية"
+    />
+    <meta property="og:url" content="https://treasor-menu.netlify.app" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tresor - Cafe" />
+    <meta
+      name="twitter:description"
+      content="نحن فخورون بأن نطلق على أنفسنا اسم مجتمع الإنتاجية"
+    />
+    <meta
+      name="twitter:image"
+      content="https://tresor1.netlify.app/images/Opening/13.jpg"
+    />
+
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <main>
+      <img id="logo" src="imgs/logo.png" alt="Logo" />
+      <div class="box-btns">
+        <button class="btn-popup" data-file="pdf/menu.pdf">Tresor Menu</button>
+        <button class="btn-popup" data-file="imgs/cafe.jpg">
+          Tresor WiFi-Cafe
+        </button>
+        <button class="btn-popup" data-file="imgs/gallary.jpg">
+          Tresor WiFi-Gallary
+        </button>
+        <button class="btn-popup" data-file="imgs/workspace.jpg">
+          Tresor WiFi-WorkSpace
+        </button>
+        <button class="btn-popup" data-file="imgs/payment.jpg">
+          Tresor Payment
+        </button>
+      </div>
+
+      <div id="popup" class="popup hidden">
+        <div class="popup-content">
+          <button id="close-popup" class="close-btn">Cancel</button>
+          <iframe id="popup-file" class="hidden"></iframe>
+          <img id="popup-file-img" class="hidden" alt="popup content" />
+        </div>
+      </div>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>

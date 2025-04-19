@@ -1,0 +1,115 @@
+/* Background Gradient */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #2f4542, #1f2f2d);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Buttons Styling */
+.box-btns {
+  text-align: center;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #2f4542;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+/* button:hover {
+  background-color: #3b605b;
+  transform: scale(1.1);
+} */
+
+#logo {
+  width: 500px;
+  height: 500px;
+  margin: auto;
+  display: block;
+}
+
+/* Popup Styles */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.popup-content {
+  position: relative;
+  width: 80%;
+  max-width: 600px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  animation: popup-appear 0.4s ease-out;
+}
+
+@keyframes popup-appear {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+iframe {
+  width: 100%;
+  height: 80vh; /* اجعل الـ iframe يملأ معظم النافذة */
+  border: none;
+}
+/* iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+} */
+
+.close-btn {
+  position: absolute;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  top: 100%;
+  left: 50%;
+  height: fit-content;
+  transform: translateX(-50%);
+  background: red;
+  color: white;
+}
+
+/* Adjusted Hidden Class */
+.hidden {
+  opacity: 0;
+  display: none;
+  pointer-events: none; /* فقط أثناء الإخفاء */
+}
+
+.popup:not(.hidden) {
+  opacity: 1;
+  pointer-events: all; /* السماح بالتفاعل عند الظهور */
+}
