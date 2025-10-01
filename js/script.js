@@ -35,12 +35,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (isImage) {
         // Preload image for better UX
+        popupFile.classList.add("hidden");
         const img = new Image();
         img.onload = () => {
           popupImage.src = file;
           hideLoading();
           popupImageContainer.classList.remove("hidden");
-          popupFile.classList.add("hidden");
         };
 
         img.onerror = () => {
@@ -48,14 +48,12 @@ document.addEventListener("DOMContentLoaded", () => {
           alert("The file could not be downloaded.");
         };
         img.src = file;
-
-        console.log("img.src: ", img.src);
       } else if (isPDF) {
+        popupImageContainer.classList.add("hidden");
         popupFile.src = file;
         popupFile.onload = () => {
           hideLoading();
           popupFile.classList.remove("hidden");
-          popupImageContainer.classList.add("hidden");
         };
         popupFile.onerror = () => {
           hideLoading();
