@@ -50,10 +50,10 @@ document.addEventListener("DOMContentLoaded", () => {
         img.src = file;
       } else if (isPDF) {
         popupImageContainer.classList.add("hidden");
+        popupFile.classList.remove("hidden");
         popupFile.src = file;
         popupFile.onload = () => {
           hideLoading();
-          popupFile.classList.remove("hidden");
         };
         popupFile.onerror = () => {
           hideLoading();
