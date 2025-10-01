@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,8 +23,6 @@
       property="og:image"
       content="https://tresor1.netlify.app/images/Opening/13.jpg"
     />
-    <!-- content="https://ali-el-shoraa.netlify.app/imgs/ali-eui1.jpg" -->
-    <!-- content="https://treasor-menu.netlify.app/imgs/logo.png" -->
     <meta
       property="og:description"
       content="نحن فخورون بأن نطلق على أنفسنا اسم مجتمع الإنتاجية"
@@ -34,6 +32,131 @@
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tresor - Cafe" />
+    <meta
+      name="twitter:description"
+      content="نحن فخورون بأن نطلق على أنفسنا اسم مجتمع الإنتاجية"
+    />
+    <meta
+      name="twitter:image"
+      content="https://tresor1.netlify.app/images/Opening/13.jpg"
+    />
+
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="logo-container">
+        <img id="logo" src="imgs/logo.png" alt="Logo" />
+      </div>
+
+      <div class="box-btns">
+        <button
+          class="btn-popup"
+          data-file="pdf/menu.pdf"
+          data-title="Tresor Menu"
+        >
+          <span class="btn-icon">📋</span>
+          Tresor Menu
+        </button>
+        <button
+          class="btn-popup"
+          data-file="imgs/cafe.jpg"
+          data-title="Tresor WiFi-Cafe"
+        >
+          <span class="btn-icon">☕</span>
+          Tresor WiFi-Cafe
+        </button>
+        <button
+          class="btn-popup"
+          data-file="imgs/gallary.jpg"
+          data-title="Tresor WiFi-Gallary"
+        >
+          <span class="btn-icon">🖼️</span>
+          Tresor WiFi-Gallary
+        </button>
+        <button
+          class="btn-popup"
+          data-file="imgs/workspace.jpg"
+          data-title="Tresor WiFi-WorkSpace"
+        >
+          <span class="btn-icon">💼</span>
+          Tresor WiFi-WorkSpace
+        </button>
+        <button
+          class="btn-popup"
+          data-file="imgs/payment.jpg"
+          data-title="Tresor Payment"
+        >
+          <span class="btn-icon">💳</span>
+          Tresor Payment
+        </button>
+      </div>
+
+      <div id="popup" class="popup hidden">
+        <div class="popup-content">
+          <div class="popup-header">
+            <h3 id="popup-title">Pop-up Title</h3>
+            <button id="close-popup" class="close-btn" aria-label="إغلاق">
+              <span>&times;</span>
+            </button>
+          </div>
+          <div class="popup-body">
+            <div class="loading-spinner hidden">Loading...</div>
+            <iframe id="popup-file" class="hidden"></iframe>
+            <div id="popup-image-container" class="hidden">
+              <img id="popup-file-img" alt="popup content" />
+              <div class="image-controls">
+                <button id="zoom-in" class="control-btn">+</button>
+                <button id="zoom-out" class="control-btn">-</button>
+                <button id="reset-zoom" class="control-btn">↺</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tresor - Cafe</title>
+
+    <link
+      rel="icon"
+      href="https://treasor-menu.netlify.app/imgs/logo.png"
+      type="image/x-icon"
+    /> -->
+
+    <!-- Meta Tags for SEO -->
+    <!-- <meta
+      name="description"
+      content="نحن فخورون بأن نطلق على أنفسنا اسم مجتمع الإنتاجية"
+    /> -->
+
+    <!-- Open Graph Meta Tags -->
+    <!-- <meta property="og:title" content="Tresor - Cafe" />
+    <meta
+      property="og:image"
+      content="https://tresor1.netlify.app/images/Opening/13.jpg"
+    /> -->
+    <!-- content="https://ali-el-shoraa.netlify.app/imgs/ali-eui1.jpg" -->
+    <!-- content="https://treasor-menu.netlify.app/imgs/logo.png" -->
+    <!-- <meta
+      property="og:description"
+      content="نحن فخورون بأن نطلق على أنفسنا اسم مجتمع الإنتاجية"
+    />
+    <meta property="og:url" content="https://treasor-menu.netlify.app" />
+    <meta property="og:type" content="website" /> -->
+
+    <!-- Twitter Card Meta Tags -->
+    <!-- <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Tresor - Cafe" />
     <meta
       name="twitter:description"
@@ -74,5 +197,5 @@
       </div>
     </main>
     <script src="js/script.js"></script>
-  </body>
+  </body> -->
 </html>
