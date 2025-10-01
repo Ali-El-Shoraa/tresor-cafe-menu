@@ -18,9 +18,12 @@ document.addEventListener("DOMContentLoaded", () => {
   // Show Popup
   document.querySelectorAll(".btn-popup").forEach((button) => {
     button.addEventListener("click", () => {
+      popupImageContainer.classList.add("hidden");
+      popupFile.classList.add("hidden");
+
       const file = button.getAttribute("data-file");
       const title = button.getAttribute("data-title");
-      console.log("file: ", file);
+
       const isImage = /\.(jpg|jpeg|png|gif|webp)$/i.test(file);
       const isPDF = /\.pdf$/i.test(file);
 
@@ -35,7 +38,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (isImage) {
         // Preload image for better UX
-        popupFile.classList.add("hidden");
         const img = new Image();
         img.onload = () => {
           popupImage.src = file;
@@ -49,7 +51,6 @@ document.addEventListener("DOMContentLoaded", () => {
         };
         img.src = file;
       } else if (isPDF) {
-        popupImageContainer.classList.add("hidden");
         popupFile.classList.remove("hidden");
         popupFile.src = file;
         popupFile.onload = () => {
